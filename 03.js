@@ -12,11 +12,15 @@ function buscarAmigo(amigos, nombre) {
   // Ej:
   //  var amigos = [{ nombre: 'toni', edad: 33 } , { nombre: 'Emi', edad: 25 }];
   //  buscarAmigo(amigos, 'toni') debe devolver { nombre: 'toni', edad: 33 };
-
   // Tu código aca:
-  
+  let i = 0;
+  while (i < amigos.length && amigos[i].nombre !== nombre) {
+    i++;
+  }
+
+  return i < amigos.length ? amigos[i] : null;
 }
 
 // No modifiques nada debajo de esta linea //
 
-module.exports = buscarAmigo
+module.exports = buscarAmigo;
